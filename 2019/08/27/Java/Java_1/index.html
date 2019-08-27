@@ -6,17 +6,17 @@
   <meta name="keywords" content>
   <meta name="description" content="型態 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="大致可區分為兩種型態  基本型態(Primary type) 類別型態(Class type) 或稱作參考型態(Refrence type)  所謂基本型態，就是你在使用時，得考慮一下資料用多少記憶體長度來存比較經濟，利用程式語法告訴JVM，然後由JVM自動為你在記憶體中配置與管理。 在Java中的基本型態主要可區分為整數、位元組、浮點數、字元與布林： 整數 可細分為short整數（佔2個位元組）">
+<meta name="description" content="大致可區分為兩種型態  基本型態(Primary type) 類別型態(Class type) 或稱作參考型態(Refrence type)  所謂基本型態，就是你在使用時，得考慮一下資料用多少記憶體長度來存比較經濟，利用程式語法告訴JVM，然後由JVM自動為你在記憶體中配置與管理。在Java中的基本型態主要可區分為整數、位元組、浮點數、字元與布林： 整數可細分為short整數（佔2個位元組）、i">
 <meta property="og:type" content="article">
 <meta property="og:title" content="型態">
 <meta property="og:url" content="http://yoursite.com/2019/08/27/Java/Java_1/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="大致可區分為兩種型態  基本型態(Primary type) 類別型態(Class type) 或稱作參考型態(Refrence type)  所謂基本型態，就是你在使用時，得考慮一下資料用多少記憶體長度來存比較經濟，利用程式語法告訴JVM，然後由JVM自動為你在記憶體中配置與管理。 在Java中的基本型態主要可區分為整數、位元組、浮點數、字元與布林： 整數 可細分為short整數（佔2個位元組）">
+<meta property="og:description" content="大致可區分為兩種型態  基本型態(Primary type) 類別型態(Class type) 或稱作參考型態(Refrence type)  所謂基本型態，就是你在使用時，得考慮一下資料用多少記憶體長度來存比較經濟，利用程式語法告訴JVM，然後由JVM自動為你在記憶體中配置與管理。在Java中的基本型態主要可區分為整數、位元組、浮點數、字元與布林： 整數可細分為short整數（佔2個位元組）、i">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-27T09:59:13.466Z">
+<meta property="og:updated_time" content="2019-08-27T10:12:20.107Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="型態">
-<meta name="twitter:description" content="大致可區分為兩種型態  基本型態(Primary type) 類別型態(Class type) 或稱作參考型態(Refrence type)  所謂基本型態，就是你在使用時，得考慮一下資料用多少記憶體長度來存比較經濟，利用程式語法告訴JVM，然後由JVM自動為你在記憶體中配置與管理。 在Java中的基本型態主要可區分為整數、位元組、浮點數、字元與布林： 整數 可細分為short整數（佔2個位元組）">
+<meta name="twitter:description" content="大致可區分為兩種型態  基本型態(Primary type) 類別型態(Class type) 或稱作參考型態(Refrence type)  所謂基本型態，就是你在使用時，得考慮一下資料用多少記憶體長度來存比較經濟，利用程式語法告訴JVM，然後由JVM自動為你在記憶體中配置與管理。在Java中的基本型態主要可區分為整數、位元組、浮點數、字元與布林： 整數可細分為short整數（佔2個位元組）、i">
 
 
 <link href="/css/style.css?v=1.0.1" rel="stylesheet">
@@ -277,7 +277,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-08-27 17:59:13'>2019-08-27 15:44</time>
+        创建时间:<time class="date" title='更新时间: 2019-08-27 18:12:20'>2019-08-27 15:44</time>
         
     </div>
     <div class="article-meta">
@@ -299,7 +299,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-text">整數</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#整數"><span class="toc-text">整數</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -319,18 +319,33 @@
 <li>基本型態(Primary type)</li>
 <li>類別型態(Class type) 或稱作參考型態(Refrence type)</li>
 </ul>
-<p>所謂基本型態，就是你在使用時，得考慮一下資料用多少記憶體長度來存比較經濟，利用程式語法告訴JVM，然後由JVM自動為你在記憶體中配置與管理。
-在Java中的基本型態主要可區分為<strong>整數、位元組、浮點數、字元與布林</strong>：</p>
-<h2>整數</h2>
-<p>可細分為short整數（佔2個位元組）、int整數（佔4個位元組）與long整數（佔8個位元組）。
-不同長度的整數，可儲存的整數範圍也不同。long整數佔的記憶體長度比int整數來得多，可表示的整數範圍也就比int整數大。
-同樣的，int整數可表示的整數範圍也比短整數來得大。</p>
-<p>型態           | 長度   | 範圍 | 範例     &lt;--標題列 (必要)
---------------|--------|-----|------     &lt;--分隔列 (必要)
-byte          | 8 bit  |  $\2^{10} = 1024$ |    0      &lt;--資料列 (選填)
-short         | 16 bit |  800 |  200
-int           | 32 bit | 1000 |  800
-long          | 64 bit | 1000 |  800</p>
+<p>所謂基本型態，就是你在使用時，得考慮一下資料用多少記憶體長度來存比較經濟，利用程式語法告訴JVM，然後由JVM自動為你在記憶體中配置與管理。<br>在Java中的基本型態主要可區分為<strong>整數、位元組、浮點數、字元與布林</strong>：</p>
+<h2 id="整數"><a href="#整數" class="headerlink" title="整數"></a>整數</h2><p>可細分為short整數（佔2個位元組）、int整數（佔4個位元組）與long整數（佔8個位元組）。<br>不同長度的整數，可儲存的整數範圍也不同。long整數佔的記憶體長度比int整數來得多，可表示的整數範圍也就比int整數大。<br>同樣的，int整數可表示的整數範圍也比短整數來得大。</p>
+<p>型態           | 長度   | 範圍 | 範例     &lt;–標題列 (必要)<br>————–|——–|—–|——     &lt;–分隔列 (必要)<br>byte          | 8 bit  | 123 |    0      &lt;–資料列 (選填)<br>short         | 16 bit |  800 |  200<br>int           | 32 bit | 1000 |  800<br>long          | 64 bit | 1000 |  800 </p>
+<table>
+<thead>
+<tr>
+<th align="center">Tables</th>
+<th align="center">Are</th>
+<th align="center">Cool</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">col 3 is</td>
+<td align="center">right-aligned</td>
+<td align="center">1600</td>
+</tr>
+<tr>
+<td align="center">col2is</td>
+<td align="center">centered</td>
+<td align="center">12</td>
+</tr>
+<tr>
+<td align="center">zebra stripes</td>
+<td align="center">are neat</td>
+<td align="center">$1</td>
+</tr>
+</tbody></table>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
@@ -348,7 +363,7 @@ long          | 64 bit | 1000 |  800</p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Shawn">Shawn</a></p>
     <p><span class="copy-title">发布时间:</span>2019-08-27, 15:44:09</p>
-    <p><span class="copy-title">最后更新:</span>2019-08-27, 17:59:13</p>
+    <p><span class="copy-title">最后更新:</span>2019-08-27, 18:12:20</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/08/27/Java/Java_1/" title="型態">http://yoursite.com/2019/08/27/Java/Java_1/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
