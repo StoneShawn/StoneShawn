@@ -1,0 +1,44 @@
+// all
+
+
+$display: (flex: flex, none: none, block: block);
+
+/* flex */
+.flex-column{
+	flex-direction: column
+}
+.flex-wrap{
+	flex-wrap: wrap
+}
+.justify-content-center{
+	justify-content: center
+}
+.justify-content-between{
+	justify-content: space-between
+}
+.justify-content-end{
+	justify-content: flex-end
+}
+.align-items-center{
+	align-items: center
+}
+.align-content-end{
+	align-content: flex-end
+}
+
+.fz-1{
+    font-size: 1rem;
+}
+
+.fz-2{
+    font-size: 2rem
+}
+
+
+
+/* display */
+@each $dk, $dv in $display{
+    .d-#{$dk}{
+        display: $dv
+    }
+}

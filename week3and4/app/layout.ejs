@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title><%- title %></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+  <header class="header">
+    <section class="nav d-flex justify-content-between align-items-center" >
+      <a href="#" class="ham-icon">
+        <i class="fas fa-bars "></i>
+      </a>
+			<img class="logo" src="https://hexschool.github.io/webLayoutTraining1st/week3/logo.png" alt="">
+		</a>
+        <ul class="nav__list d-flex  justify-content-between fz-1">
+            <li><a href="">系列鏡框</a> </li>
+            <li><a href="">門市據點</a> </li>
+            <li><a href="">部落格</a> </li>
+            <li><a href="">常見問題</a> </li>
+        </ul>
+    </section>
+  </header>
+
+  <%- contents %>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__start">
+        <div class="footer__bar d-flex justify-content-between ">
+          <ul class="footer__bar--menu d-flex align-items-center">
+            <li><a href="">首頁</a></li>
+            <li><a href="">系列鏡框</a></li>
+            <li><a href="">門市據點</a></li>
+            <li><a href="">部落格</a></li>
+            <li><a href="">常見問題</a></li>
+          </ul>
+  
+          <ul class="d-flex footer__bar--social ">
+            <li><a href="#"><img src="./assets/images/icon-fb.svg" alt=""></a></li>
+            <li><a href="#"><img src="./assets/images/icon-ig.svg" alt=""></a></li>
+            <li><a href="#"><img src="./assets/images/icon-line.svg" alt=""></a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__call">
+          <ul>
+            <li><img src="./assets/images/icon-phone.svg">0800-000-000</li>
+            <li><img src="./assets/images/icon-mail.svg">glasses@business.com</li>
+          </ul>
+        </div>
+  
+      </div>
+     
+      <div class="footer__policy d-flex justify-content-between">
+        <div class="copyright d-flex align-items-center">
+          <img src="./assets/images/logo.png" alt="">
+        
+        </div>
+  
+        <ul class="footer__policy--end d-flex align-items-center">
+          <li>  <p> Copyright © 2020 Glasses.All rights reserved.</p></li>
+          <li><a href="#">隱私權政策</a></li>
+          <li><a href="#">服務條款</a></li>
+        </ul>
+    
+      </div>
+    </div>
+   
+  </footer>
+</body>
+
+</html>

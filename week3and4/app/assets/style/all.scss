@@ -1,0 +1,16 @@
+@import "./reset";
+@import "./variable";
+@import "./_helper.scss";
+@import "./layout/_base.scss";
+@import "./layout/_nav.scss";
+@import "./layout/_footer.scss";
+@import "./pages/index";
+
+
+$color: #00cc99;
+
+// .header {
+//   height: 200px;
+//   background-color: #00cc99;
+// }
+
