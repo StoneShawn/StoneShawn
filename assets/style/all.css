@@ -1,0 +1,744 @@
+@charset "UTF-8";
+/* reset css */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none; }
+
+/* rwd img css，可當作是 CSS Reset 其中一個 */
+img {
+  max-width: 100%;
+  height: auto; }
+
+/* 全域 border box */
+*, *::before, *::after {
+  box-sizing: border-box; }
+
+/* flex */
+.flex-column {
+  flex-direction: column; }
+
+.flex-wrap {
+  flex-wrap: wrap; }
+
+.justify-content-center {
+  justify-content: center; }
+
+.justify-content-between {
+  justify-content: space-between; }
+
+.justify-content-end {
+  justify-content: flex-end; }
+
+.align-items-center {
+  align-items: center; }
+
+.align-content-end {
+  align-content: flex-end; }
+
+.fz-1 {
+  font-size: 1rem; }
+
+.fz-2 {
+  font-size: 2rem; }
+
+/* display */
+.d-flex {
+  display: flex; }
+
+.d-none {
+  display: none; }
+
+.d-block {
+  display: block; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 16px; }
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 672px; } }
+
+@media (max-width: 375px) {
+  .container {
+    max-width: 352px; } }
+
+a:link {
+  color: #fff; }
+
+a:visited {
+  color: #fff; }
+
+.nav {
+  background: #AA0601;
+  padding: 0 88px;
+  height: 108px; }
+  .nav .ham-icon {
+    display: none; }
+  .nav .logo {
+    width: 80px; }
+  .nav li a {
+    line-height: 30px;
+    font-size: 20px;
+    padding: 16px;
+    margin: 24px 16px; }
+    .nav li a:hover {
+      padding-bottom: 5px;
+      border-bottom: 3px solid #fff;
+      border-radius: 5px; }
+  .nav li:last-child a {
+    /* padding-right: 0; */
+    margin-right: 0; }
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 0 48px; }
+    .nav li a {
+      padding: 10px;
+      margin: 30px 10px; } }
+
+@media (max-width: 375px) {
+  .nav {
+    justify-content: center;
+    height: 50px; }
+    .nav .ham-icon {
+      display: flex;
+      position: absolute;
+      left: 13px;
+      color: #FFFFFF;
+      font-size: 24px; }
+    .nav .logo {
+      width: 48px; }
+    .nav__list {
+      display: none; } }
+
+.footer {
+  background: #AA0601;
+  color: #fff;
+  padding-top: 36px;
+  padding-bottom: 28px; }
+  .footer__start {
+    border-bottom: 1px solid #fff; }
+
+.footer__bar {
+  margin-bottom: 18px; }
+  .footer__bar ul:first-child li:not(:last-child) {
+    margin-right: 48px; }
+  .footer__bar ul:last-child li:not(:last-child) {
+    margin-right: 32px; }
+
+.footer__call {
+  font-size: 36px;
+  line-height: 48px;
+  margin-bottom: 24px; }
+  .footer__call img {
+    vertical-align: middle; }
+  .footer__call li:first-child {
+    margin-bottom: 16px; }
+  .footer__call li:last-child {
+    padding-bottom: 24px; }
+
+.footer__policy {
+  padding-top: 24px; }
+  .footer__policy img {
+    margin-right: 24px; }
+  .footer__policy li:first-child {
+    margin-right: 62px; }
+
+@media (max-width: 768px) {
+  .footer__start {
+    padding-bottom: 24px; }
+  .footer__bar--social img {
+    width: 24px; }
+  .footer__call {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 0; }
+    .footer__call img {
+      width: 24px;
+      margin-right: 8px; }
+    .footer__call li:last-child {
+      padding-bottom: 0; }
+  .footer__policy .copyright img {
+    display: none; }
+  .footer__policy--end {
+    padding-top: 24px;
+    width: 100%; }
+    .footer__policy--end li:first-child {
+      flex-grow: 3; }
+    .footer__policy--end li:last-child {
+      margin-left: 24px; } }
+
+@media (max-width: 375px) {
+  .footer__start {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-bottom: 24px; }
+  .footer__bar--menu {
+    display: none; }
+  .footer__call {
+    font-size: 16px;
+    margin-bottom: 0; }
+    .footer__call img {
+      width: 13px; }
+    .footer__call li:not(:last-child) {
+      margin-bottom: 8px; }
+    .footer__call li:last-child {
+      padding-bottom: 0; }
+  .footer__policy {
+    flex-direction: row-reverse;
+    align-items: flex-end; }
+    .footer__policy .copyright img {
+      display: flex;
+      width: 46px;
+      margin-right: 0; }
+    .footer__policy--end {
+      flex-direction: column;
+      align-items: start;
+      padding-top: 16px;
+      font-size: 14px; }
+      .footer__policy--end li {
+        margin-bottom: 8px; }
+        .footer__policy--end li:first-child {
+          width: 100%; }
+        .footer__policy--end li:last-child {
+          margin-left: 0; } }
+
+h2 {
+  font-size: 48px;
+  text-align: center; }
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 32px; } }
+
+@media (max-width: 375px) {
+  h2 {
+    font-size: 24px; } }
+
+.mr-1 {
+  margin-right: 0.5rem; }
+
+.mr-3 {
+  margin-right: 24px; }
+
+.ml-3 {
+  margin-left: 24px; }
+
+.mb-1 {
+  margin-bottom: 8px; }
+
+.banner {
+  background-image: url(https://rockalen.github.io/w3HomeWork/images/banner.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #650300; }
+  .banner__content {
+    height: 840px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    /* padding-right: 360px; */
+    font-weight: 700; }
+    .banner__content p {
+      line-height: 56px;
+      font-size: 36px; }
+    .banner__content h1 {
+      font-size: 64px; }
+
+/* 平板 */
+@media (max-width: 768px) {
+  .banner {
+    background-image: url(https://rockalen.github.io/w3HomeWork/images/68.png); }
+    .banner__content p {
+      font-size: 20px;
+      line-height: 30px; }
+    .banner__content h1 {
+      font-size: 48px; } }
+
+/* 手機 */
+@media (max-width: 375px) {
+  .banner__content {
+    height: 394px; }
+    .banner__content .p {
+      font-size: 16px; }
+  .banner {
+    background-image: url(https://rockalen.github.io/w3HomeWork/images/banner-phone.png);
+    background-size: cover; }
+    .banner__content p {
+      font-size: 16px; }
+    .banner__content h1 {
+      font-size: 32px; } }
+
+.profession {
+  background-color: #AA06010D;
+  padding-top: 64px;
+  padding-bottom: 80px; }
+  .profession h2 {
+    color: #650300;
+    margin-bottom: 44px; }
+  .profession li {
+    width: 24.9%;
+    text-align: center;
+    padding: 0 37px; }
+    .profession li img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 40px; }
+    .profession li h3 {
+      font-size: 24px;
+      color: #650300;
+      margin-bottom: 4px; }
+    .profession li p {
+      font-size: 16px;
+      text-align: left;
+      line-height: 24px; }
+  .profession__list {
+    display: flex;
+    justify-content: space-around; }
+
+/* 平板 */
+@media (max-width: 768px) {
+  .profession li {
+    width: 46%;
+    padding: 0 50px;
+    margin-bottom: 32px; }
+    .profession li img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 16px; }
+    .profession li h3 {
+      margin-bottom: 8px; }
+    .profession li:last-child {
+      margin-bottom: 0; }
+  .order-1 {
+    order: 1; }
+  .order-2 {
+    order: 2; } }
+
+/* (手機) */
+@media (max-width: 375px) {
+  .profession {
+    padding: 56px 0; }
+    .profession li {
+      width: 100%; } }
+
+.product {
+  padding-top: 64px;
+  padding-bottom: 80px; }
+  .product h2 {
+    color: #650300;
+    margin-bottom: 60px; }
+  .product li {
+    display: flex;
+    align-items: center; }
+    .product li:nth-child(2) {
+      flex-direction: row-reverse; }
+    .product li:not(:last-child) {
+      margin-bottom: 32px; }
+    .product li h3 {
+      font-size: 48px;
+      display: flex;
+      align-items: center;
+      color: #AA0601;
+      font-style: italic;
+      font-weight: 700; }
+
+/* 平板 */
+@media (max-width: 768px) {
+  .product {
+    padding: 40px 0; }
+    .product h2 {
+      margin-bottom: 32px; }
+  .product__list img {
+    width: 60%; }
+  .product__list li h3 {
+    justify-content: center;
+    font-size: 28px;
+    width: 100%; }
+    .product__list li h3 img {
+      width: 10%; }
+  .product__list li:nth-child(2) {
+    flex-direction: row; }
+    .product__list li:nth-child(2) img {
+      margin-left: 0; } }
+
+/* 經典系列鏡框(手機) */
+@media (max-width: 375px) {
+  .product {
+    padding: 24px 0; }
+    .product h2 {
+      margin-bottom: 16px; }
+  .product__list li {
+    position: relative; }
+    .product__list li img {
+      width: 100%; }
+    .product__list li h3 {
+      font-size: 28px;
+      line-height: 42px;
+      position: absolute;
+      color: #fff; }
+    .product__list li:nth-child(1) h3 img {
+      width: 32px;
+      margin-right: 0.5rem;
+      content: url("https://rockalen.github.io/w3HomeWork/images/icon-diamond-white.svg"); }
+    .product__list li:nth-child(2) h3 img {
+      width: 32px;
+      margin-right: 0.5rem;
+      content: url("https://rockalen.github.io/w3HomeWork/images/icon-sun-white.svg"); }
+    .product__list li:nth-child(3) h3 img {
+      width: 23px;
+      margin-right: 0.5rem;
+      content: url("https://rockalen.github.io/w3HomeWork/images/icon-thunder-white.svg"); }
+    .product__list li:not(:last-child) {
+      margin-bottom: 8px; } }
+
+.design {
+  background-size: auto 2162px;
+  background-image: url(https://rockalen.github.io/w3HomeWork/images/bg.png);
+  background-repeat: no-repeat;
+  background-position: center 0;
+  padding-bottom: 80px; }
+  .design h2 {
+    color: #fff;
+    margin-bottom: 60px; }
+  .design__more {
+    max-width: 1539px;
+    margin-bottom: 60px; }
+
+.design__more .joint-dgn-phone-block {
+  display: none; }
+
+.design__more--button {
+  width: 100%;
+  position: relative;
+  margin-top: 6px;
+  display: flex;
+  justify-content: flex-end; }
+  .design__more--button span::before {
+    content: "MORE";
+    position: absolute;
+    transition: all .65s .3s;
+    transform: translateY(0px); }
+  .design__more--button span:hover::before {
+    transform: translateY(-85px);
+    opacity: .7; }
+  .design__more--button span::after {
+    content: "MORE";
+    position: absolute;
+    transition: all .65s .3s;
+    transform: translateY(0px); }
+  .design__more--button span:hover::after {
+    transform: translateY(-145px);
+    opacity: .4; }
+  .design__more--button:hover span img:last-child {
+    transform: translateX(15px); }
+  .design__more--button img {
+    margin-right: 83px; }
+  .design__more--button span {
+    padding-left: 32px;
+    padding-right: 19px;
+    top: 16%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    max-width: 315px;
+    background-color: #fff;
+    font-size: 72px;
+    font-weight: 700;
+    color: #AA0601;
+    line-height: 108px; }
+    .design__more--button span img {
+      margin-top: 10px;
+      margin-left: 17px; }
+
+.design__box {
+  /* text-align: center; */
+  color: #AA0601;
+  font-size: 72px;
+  font-weight: 700;
+  width: 100%;
+  margin-bottom: 80px; }
+  .design__box li {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 49%;
+    height: 592px;
+    background-repeat: no-repeat;
+    background-size: cover; }
+    .design__box li::after {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      content: "";
+      background: rgba(255, 255, 255, 0.5); }
+    .design__box li span {
+      z-index: 10000; }
+
+.design__box--item1 {
+  background-image: url(https://rockalen.github.io/w3HomeWork/images/product-8.png);
+  margin-right: 30px; }
+
+.design__box--item2 {
+  background-image: url(https://rockalen.github.io/w3HomeWork/images/product-9.png); }
+
+/* 平板 */
+@media (max-width: 768px) {
+  .design {
+    background-size: auto 1221px;
+    padding: 40px 0; }
+    .design h2 {
+      margin-bottom: 32px; }
+    .design__more {
+      max-width: 672px;
+      margin-bottom: 60px; }
+  .design__more .joint-dgn-phone-block {
+    display: none; }
+  .design__more--button {
+    margin-top: 0; }
+    .design__more--button img {
+      margin-right: 47px; }
+    .design__more--button div {
+      /* margin-top: 0; */
+      width: 147px;
+      height: 77px;
+      display: flex;
+      justify-content: flex-end; }
+    .design__more--button span {
+      padding-left: 19px;
+      /* padding-right: 19px; */
+      top: 9%;
+      font-size: 40px;
+      line-height: 59px;
+      max-width: 178px; }
+      .design__more--button span img {
+        width: 22px;
+        margin-top: 7px;
+        margin-left: 10px; }
+  .design__box {
+    font-size: 32px;
+    margin-bottom: 0; }
+    .design__box li {
+      height: 280px; } }
+
+@media (max-width: 375px) {
+  .design {
+    background-size: auto 1096px;
+    padding: 24px 0; }
+    .design h2 {
+      margin-bottom: 16px; }
+    .design__more {
+      max-width: 327px;
+      margin-bottom: 20px; }
+      .design__more .joint-dgn-phone-block {
+        display: flex;
+        margin-bottom: 2px; }
+      .design__more .joint-dgn-item4 {
+        min-width: 156px;
+        max-height: 226px; }
+      .design__more .joint-dgn-item7 .box-hidden {
+        display: none; }
+      .design__more .joint-dgn-p6 img {
+        max-width: 32px;
+        min-height: 99px; }
+      .design__more--button {
+        justify-content: flex-start; }
+        .design__more--button span {
+          padding-left: 12px;
+          top: 34px;
+          left: 13px;
+          font-size: 26px;
+          line-height: 41px;
+          max-width: 124px; }
+          .design__more--button span img {
+            margin-top: 0;
+            margin-left: 8px;
+            width: 18px; }
+        .design__more--button div {
+          justify-content: flex-start;
+          /* align-items: center; */
+          height: 53px;
+          margin-top: 28px; }
+          .design__more--button div img {
+            width: 102px; }
+    .design .design__more--col {
+      max-width: 169px; }
+    .design .mb-1 {
+      margin-bottom: 2px; }
+    .design .mr-1 {
+      margin-right: 2px; }
+  .design__box {
+    flex-direction: column; }
+    .design__box li {
+      width: 100%; }
+      .design__box li:first-child {
+        margin-bottom: 20px; } }
+
+.recommend {
+  padding-top: 40px; }
+  .recommend li {
+    width: 23.5%;
+    background-color: #fff; }
+    .recommend li img {
+      width: 100%;
+      height: 256px; }
+    .recommend li div {
+      border-style: solid;
+      border-width: 0px 1px 1px 1px;
+      border-color: #DEE2E6; }
+    .recommend li p {
+      padding: 16px;
+      padding-top: 0px; }
+      .recommend li p p:last-child {
+        line-height: 21px; }
+    .recommend li h3 {
+      padding: 16px;
+      line-height: 21px;
+      font-weight: 600; }
+
+/* 平板 */
+@media (max-width: 768px) {
+  .recommend li {
+    width: 48%;
+    margin-bottom: 24px; }
+    .recommend li p:last-child {
+      color: #707070; } }
+
+/* 手機 */
+@media (max-width: 375px) {
+  .recommend {
+    padding-top: 24px; }
+    .recommend li {
+      width: 100%; } }
+
+.contact {
+  background: #AA06010D;
+  font-size: 20px;
+  padding-top: 64px;
+  padding-bottom: 108px; }
+  .contact__container {
+    max-width: 792px;
+    margin: 0 auto; }
+  .contact h2 {
+    margin-bottom: 24px; }
+  .contact p {
+    margin-bottom: 20px; }
+  .contact label {
+    display: block;
+    margin-bottom: 4px; }
+  .contact input, .contact textarea {
+    background-color: transparent;
+    width: 100%;
+    font-family: 'Microsoft JhengHei';
+    font-size: 16px;
+    border: 1px solid #000; }
+  .contact input {
+    padding: 12.5px 16px; }
+  .contact textarea {
+    height: 136px;
+    padding: 14px 16px;
+    box-sizing: border-box;
+    /* border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8; */
+    resize: none; }
+  .contact form div {
+    margin-bottom: 16px;
+    font-size: 16px; }
+  .contact .checkbox {
+    align-items: center;
+    margin-bottom: 42px; }
+    .contact .checkbox label {
+      margin-bottom: 0;
+      line-height: 24px; }
+    .contact .checkbox input {
+      margin: 4px;
+      width: 22px;
+      height: 22px; }
+  .contact .contact__container--button {
+    text-align: center; }
+    .contact .contact__container--button a {
+      padding: 16px 58px;
+      background: #AA0601; }
+
+@media (max-width: 768px) {
+  .contact {
+    padding-top: 40px;
+    padding-bottom: 63px;
+    font-size: 16px; }
+    .contact h2 {
+      margin-bottom: 16px; }
+    .contact p {
+      line-height: 24px; }
+    .contact__container {
+      max-width: 496px;
+      margin: 0 auto; }
+    .contact .checkbox {
+      align-items: start; }
+    .contact .contact__container--button {
+      text-align: center; }
+      .contact .contact__container--button a {
+        padding: 7px 36px;
+        background: #AA0601; } }
+
+@media (max-width: 375px) {
+  .contact__container {
+    max-width: 327px;
+    margin: 0 auto; }
+  .contact .checkbox {
+    align-items: start;
+    margin-bottom: 27px;
+    font-size: 14px; } }
+
+/*# sourceMappingURL=all.css.map */
