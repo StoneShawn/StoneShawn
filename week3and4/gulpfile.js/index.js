@@ -4,10 +4,35 @@ const autoprefixer = require('autoprefixer');
 const minimist = require('minimist');
 const browserSync = require('browser-sync').create();
 const { envOptions } = require('./envOptions');
+const ghPages = require('gulp-gh-pages');
+
 
 let options = minimist(process.argv.slice(2), envOptions);
 //現在開發狀態
 console.log(`Current mode：${options.env}`);
+
+
+// gh-pages
+gulp.task('deploy', function() {
+  return gulp.src('build/**/*')
+    .pipe(ghPages());
+});
+// pug
+gulp.task('pug', function(){
+  return gulp.src(['app/pug/*.pug'])
+    .pipe(pug({
+      pretty: true
+    }))
+    .pipe(gulp.dest('build/'))
+});
+
+// Cleaning
+gulp.task('clean', function(){
+  return del(['build/**/*']);
+});
+gulp.task('watch', function(){
+  gulp.watch('app/pug/**/*.pug', ['pug']);
+});
 
 function copyFile() {
   return gulp.src(envOptions.conyFile.src)
@@ -18,6 +43,17 @@ function copyFile() {
     }),
   );
 }
+
+// Build Sequence
+// -------------------
+gulp.task('default', function(){
+  runSequence('watch', ['pug']);
+});
+// 在執行 build 時，也依序執行 deploy
+// 不過 deploy 要放在最後面
+gulp.task('build', function(){
+  runSequence('clean', ['pug'], 'deploy');
+});
 
 function layoutHTML() {
   return gulp.src(envOptions.html.src)
